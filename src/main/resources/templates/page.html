@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>L1.1</title>
+</head>
+<body>
+<form action="/page.html" th:action="@{/greeting}" th:object="${greeting}" method="POST">
+    Login: <input type="text" name="message"/>
+    <input type="submit" value="Ok">
+</form>
+
+<p th:text="'Message: ' + ${requestObject.message}"></p>
+
+<p th:text="'Method: ' + ${requestObject.method}"></p>
+
+<p th:text="'URL: ' + ${requestObject.url}"></p>
+
+<p th:text="'PathInfo: ' + ${requestObject.pathInfo}"></p>
+
+<p th:text="'SessionId: ' + ${requestObject.sessionId}"></p>
+
+<p th:text="'Parameters: ' + ${requestObject.parameters}"></p>
+
+</body>
+</html>
